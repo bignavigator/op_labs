@@ -1,0 +1,13 @@
+"C:\Program Files\JetBrains\CLion 2022.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2022.3/bin/ninja/win/ninja.exe" -G Ninja -S "C:\Users\USer\Documents\Основы программирования\Python Labs\lab15" -B "C:\Users\USer\Documents\Основы программирования\Python Labs\lab15\cmake-build-debug"
+-- Configuring done
+CMake Error at CMakeLists.txt:20 (add_executable):
+  Cannot find source file:
+
+    lab15/matrix.c
+
+
+CMake Error at CMakeLists.txt:20 (add_executable):
+  No SOURCES given to target: Python_Labs
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
