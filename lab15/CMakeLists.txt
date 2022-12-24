@@ -1,0 +1,166 @@
+cmake_minimum_required(VERSION 3.24)
+project(Python_Labs)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(venv/include)
+include_directories(venv/include/site)
+include_directories(venv/include/site/python3.11)
+include_directories(venv/include/site/python3.11/greenlet)
+include_directories(venv/include/site/python3.11/pygame)
+include_directories(venv/include/site/python3.11/pygame/include)
+include_directories(venv/Lib/site-packages/greenlet)
+include_directories(venv/Lib/site-packages/greenlet/platform)
+include_directories(venv/Lib/site-packages/numpy/core/include)
+include_directories(venv/Lib/site-packages/numpy/core/include/numpy)
+include_directories(venv/Lib/site-packages/numpy/core/include/numpy/libdivide)
+include_directories(venv/Lib/site-packages/numpy/core/include/numpy/random)
+include_directories(venv/Lib/site-packages/numpy/f2py/src)
+
+add_executable(Python_Labs
+        lab15/matrix.c
+        venv/include/site/python3.11/greenlet/greenlet.h
+        venv/include/site/python3.11/pygame/include/_pygame.h
+        venv/include/site/python3.11/pygame/include/bitmask.h
+        venv/include/site/python3.11/pygame/include/pgcompat.h
+        venv/include/site/python3.11/pygame/include/pgimport.h
+        venv/include/site/python3.11/pygame/include/pgplatform.h
+        venv/include/site/python3.11/pygame/include/pygame.h
+        venv/include/site/python3.11/pygame/include/pygame_bufferproxy.h
+        venv/include/site/python3.11/pygame/include/pygame_font.h
+        venv/include/site/python3.11/pygame/include/pygame_freetype.h
+        venv/include/site/python3.11/pygame/include/pygame_mask.h
+        venv/include/site/python3.11/pygame/include/pygame_mixer.h
+        venv/include/site/python3.11/pygame/include/sse2neon.h
+        venv/include/site/python3.11/pygame/_blit_info.h
+        venv/include/site/python3.11/pygame/_camera.h
+        venv/include/site/python3.11/pygame/_pygame.h
+        venv/include/site/python3.11/pygame/_surface.h
+        venv/include/site/python3.11/pygame/camera.h
+        venv/include/site/python3.11/pygame/font.h
+        venv/include/site/python3.11/pygame/freetype.h
+        venv/include/site/python3.11/pygame/mask.h
+        venv/include/site/python3.11/pygame/mixer.h
+        venv/include/site/python3.11/pygame/palette.h
+        venv/include/site/python3.11/pygame/pgarrinter.h
+        venv/include/site/python3.11/pygame/pgbufferproxy.h
+        venv/include/site/python3.11/pygame/pgcompat.h
+        venv/include/site/python3.11/pygame/pgopengl.h
+        venv/include/site/python3.11/pygame/pgplatform.h
+        venv/include/site/python3.11/pygame/pygame.h
+        venv/include/site/python3.11/pygame/scrap.h
+        venv/include/site/python3.11/pygame/simd_blitters.h
+        venv/include/site/python3.11/pygame/surface.h
+        venv/Lib/site-packages/greenlet/platform/switch_aarch64_gcc.h
+        venv/Lib/site-packages/greenlet/platform/switch_alpha_unix.h
+        venv/Lib/site-packages/greenlet/platform/switch_amd64_unix.h
+        venv/Lib/site-packages/greenlet/platform/switch_arm32_gcc.h
+        venv/Lib/site-packages/greenlet/platform/switch_arm32_ios.h
+        venv/Lib/site-packages/greenlet/platform/switch_arm64_msvc.h
+        venv/Lib/site-packages/greenlet/platform/switch_csky_gcc.h
+        venv/Lib/site-packages/greenlet/platform/switch_m68k_gcc.h
+        venv/Lib/site-packages/greenlet/platform/switch_mips_unix.h
+        venv/Lib/site-packages/greenlet/platform/switch_ppc64_aix.h
+        venv/Lib/site-packages/greenlet/platform/switch_ppc64_linux.h
+        venv/Lib/site-packages/greenlet/platform/switch_ppc_aix.h
+        venv/Lib/site-packages/greenlet/platform/switch_ppc_linux.h
+        venv/Lib/site-packages/greenlet/platform/switch_ppc_macosx.h
+        venv/Lib/site-packages/greenlet/platform/switch_ppc_unix.h
+        venv/Lib/site-packages/greenlet/platform/switch_riscv_unix.h
+        venv/Lib/site-packages/greenlet/platform/switch_s390_unix.h
+        venv/Lib/site-packages/greenlet/platform/switch_sparc_sun_gcc.h
+        venv/Lib/site-packages/greenlet/platform/switch_x32_unix.h
+        venv/Lib/site-packages/greenlet/platform/switch_x64_msvc.h
+        venv/Lib/site-packages/greenlet/platform/switch_x86_msvc.h
+        venv/Lib/site-packages/greenlet/platform/switch_x86_unix.h
+        venv/Lib/site-packages/greenlet/tests/_test_extension.c
+        venv/Lib/site-packages/greenlet/tests/_test_extension_cpp.cpp
+        venv/Lib/site-packages/greenlet/greenlet.cpp
+        venv/Lib/site-packages/greenlet/greenlet.h
+        venv/Lib/site-packages/greenlet/greenlet_allocator.hpp
+        venv/Lib/site-packages/greenlet/greenlet_compiler_compat.hpp
+        venv/Lib/site-packages/greenlet/greenlet_cpython_compat.hpp
+        venv/Lib/site-packages/greenlet/greenlet_exceptions.hpp
+        venv/Lib/site-packages/greenlet/greenlet_greenlet.hpp
+        venv/Lib/site-packages/greenlet/greenlet_internal.hpp
+        venv/Lib/site-packages/greenlet/greenlet_refs.hpp
+        venv/Lib/site-packages/greenlet/greenlet_slp_switch.hpp
+        venv/Lib/site-packages/greenlet/greenlet_thread_state.hpp
+        venv/Lib/site-packages/greenlet/greenlet_thread_state_dict_cleanup.hpp
+        venv/Lib/site-packages/greenlet/greenlet_thread_support.hpp
+        venv/Lib/site-packages/greenlet/slp_platformselect.h
+        venv/Lib/site-packages/numpy/core/include/numpy/libdivide/libdivide.h
+        venv/Lib/site-packages/numpy/core/include/numpy/random/bitgen.h
+        venv/Lib/site-packages/numpy/core/include/numpy/random/distributions.h
+        venv/Lib/site-packages/numpy/core/include/numpy/__multiarray_api.h
+        venv/Lib/site-packages/numpy/core/include/numpy/__ufunc_api.h
+        venv/Lib/site-packages/numpy/core/include/numpy/_neighborhood_iterator_imp.h
+        venv/Lib/site-packages/numpy/core/include/numpy/_numpyconfig.h
+        venv/Lib/site-packages/numpy/core/include/numpy/arrayobject.h
+        venv/Lib/site-packages/numpy/core/include/numpy/arrayscalars.h
+        venv/Lib/site-packages/numpy/core/include/numpy/experimental_dtype_api.h
+        venv/Lib/site-packages/numpy/core/include/numpy/halffloat.h
+        venv/Lib/site-packages/numpy/core/include/numpy/ndarrayobject.h
+        venv/Lib/site-packages/numpy/core/include/numpy/ndarraytypes.h
+        venv/Lib/site-packages/numpy/core/include/numpy/noprefix.h
+        venv/Lib/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h
+        venv/Lib/site-packages/numpy/core/include/numpy/npy_3kcompat.h
+        venv/Lib/site-packages/numpy/core/include/numpy/npy_common.h
+        venv/Lib/site-packages/numpy/core/include/numpy/npy_cpu.h
+        venv/Lib/site-packages/numpy/core/include/numpy/npy_endian.h
+        venv/Lib/site-packages/numpy/core/include/numpy/npy_interrupt.h
+        venv/Lib/site-packages/numpy/core/include/numpy/npy_math.h
+        venv/Lib/site-packages/numpy/core/include/numpy/npy_no_deprecated_api.h
+        venv/Lib/site-packages/numpy/core/include/numpy/npy_os.h
+        venv/Lib/site-packages/numpy/core/include/numpy/numpyconfig.h
+        venv/Lib/site-packages/numpy/core/include/numpy/old_defines.h
+        venv/Lib/site-packages/numpy/core/include/numpy/oldnumeric.h
+        venv/Lib/site-packages/numpy/core/include/numpy/ufuncobject.h
+        venv/Lib/site-packages/numpy/core/include/numpy/utils.h
+        venv/Lib/site-packages/numpy/core/tests/data/generate_umath_validation_data.cpp
+        venv/Lib/site-packages/numpy/core/tests/examples/limited_api/limited_api.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_asimd.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_asimddp.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_asimdfhm.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_asimdhp.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_avx.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_avx2.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_avx512_clx.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_avx512_cnl.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_avx512_icl.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_avx512_knl.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_avx512_knm.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_avx512_skx.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_avx512cd.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_avx512f.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_f16c.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_fma3.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_fma4.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_neon.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_neon_fp16.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_neon_vfpv4.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_popcnt.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_sse.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_sse2.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_sse3.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_sse41.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_sse42.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_ssse3.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_vsx.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_vsx2.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_vsx3.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_vsx4.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_vx.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_vxe.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_vxe2.c
+        venv/Lib/site-packages/numpy/distutils/checks/cpu_xop.c
+        venv/Lib/site-packages/numpy/distutils/checks/extra_avx512bw_mask.c
+        venv/Lib/site-packages/numpy/distutils/checks/extra_avx512dq_mask.c
+        venv/Lib/site-packages/numpy/distutils/checks/extra_avx512f_reduce.c
+        venv/Lib/site-packages/numpy/distutils/checks/extra_vsx4_mma.c
+        venv/Lib/site-packages/numpy/distutils/checks/extra_vsx_asm.c
+        venv/Lib/site-packages/numpy/distutils/checks/test_flags.c
+        venv/Lib/site-packages/numpy/distutils/mingw/gfortran_vs2003_hack.c
+        venv/Lib/site-packages/numpy/f2py/src/fortranobject.c
+        venv/Lib/site-packages/numpy/f2py/src/fortranobject.h
+        venv/Lib/site-packages/numpy/f2py/tests/src/array_from_pyobj/wrapmodule.c matrix_extension.c)
